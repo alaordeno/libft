@@ -6,11 +6,11 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 17:48:10 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/07 17:55:04 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/07 18:15:54 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/*#include <stdio.h>*/
 
 int	ft_isdigit(int x)
 {
@@ -20,7 +20,7 @@ int	ft_isdigit(int x)
 		return (0);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int		x;
 	char	y;
@@ -29,4 +29,4 @@ int	main(void)
 	x = ft_isdigit(y);
 	printf("%d", x);
 	return (0);
-}
+}*/
