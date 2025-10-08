@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 16:41:15 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/08 13:34:49 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/08 11:47:41 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/08 13:56:07 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char x)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
-	if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z'))
-		return (1);
-	else
-		return (0);
+	unsigned int	temp;
+
+	temp = 0;
+	while (*src != '\0' && size--)
+	{
+		*dest = *src;	
+		src++;
+		dest++;
+		temp++;
+	}
+	return (temp);		
 }
 
-/*int	main(void)
+int main(void)
 {
-	char	x;
-	int		y;
+	char src[] = "Puta funcion";
+	char dest[45];
+	unsigned int	temp;
 
-	x = 'a';
-	y = ft_isalpha(x);
-	printf("%d", y);
-	return (0);
-}*/
+	temp = ft_strlcpy(dest, src, ft_strlen(src));	
+	printf("temp: %u   dest: %s\n", temp, dest);
+}

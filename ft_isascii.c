@@ -6,11 +6,11 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 18:56:31 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/07 19:36:47 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/08 13:34:52 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include "libft.h"
 
 int	ft_isascii(int x)
 {

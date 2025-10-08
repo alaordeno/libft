@@ -6,11 +6,11 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 19:56:54 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/07 20:16:04 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/08 13:54:56 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_strlen(char *x)
 {
@@ -22,12 +22,11 @@ int	ft_strlen(char *x)
 	return (i);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char	*str1;
+	char	*y;
 
-	*str1 = "Hola";
-	printf("La longitud de '%s' es %d\n", str1, ft_strlen(str1));
+	y = "hola";
+	printf("%d\n", ft_strlen(y));
 	return (0);
-}
- /* REVISAR EL MAIN*/
+}*/

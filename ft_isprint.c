@@ -6,11 +6,11 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 19:40:10 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/07 19:55:11 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/08 13:35:01 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
+#include "libft.h"
 
 int	ft_ispring(int x)
 {

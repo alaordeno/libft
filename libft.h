@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 16:41:15 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/08 13:34:49 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/08 13:53:44 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int	ft_isalpha(char x)
-{
-	if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z'))
-		return (1);
-	else
-		return (0);
-}
+# include <stdint.h>
+# include <string.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <ctype.h>
+# include <stddef.h>
+# include <stdio.h>
 
-/*int	main(void)
-{
-	char	x;
-	int		y;
+	int		ft_isalnum(char x);
+	int		ft_isalpha(char x);
+	int		ft_isascii(int x);
+	int		ft_isdigit(int x);
+	int		ft_ispring(int x);
+	size_t	ft_strlcpy(char *dest, char *src, size_t size);
+	int		ft_strlen(char *x);
 
-	x = 'a';
-	y = ft_isalpha(x);
-	printf("%d", y);
-	return (0);
-}*/
+#endif 
