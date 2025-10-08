@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/08 13:53:44 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/08 15:23:50 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@
 # include <stddef.h>
 # include <stdio.h>
 
-	int		ft_isalnum(char x);
-	int		ft_isalpha(char x);
-	int		ft_isascii(int x);
-	int		ft_isdigit(int x);
-	int		ft_ispring(int x);
-	size_t	ft_strlcpy(char *dest, char *src, size_t size);
-	int		ft_strlen(char *x);
+int		ft_isalnum(char x);
+int		ft_isalpha(char x);
+int		ft_isascii(int x);
+int		ft_isdigit(int x);
+int		ft_ispring(int x);
+size_t	ft_strlcpy(char *dest, char *src, size_t size);
+int		ft_strlen(char *x);
 
 #endif 
