@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/08 16:19:24 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/10 13:06:38 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ size_t	ft_strlcpy(char *dest, char *src, size_t size);
 int		ft_strlen(char *x);
 char	ft_touper(char x);
 char	ft_tolower(char y);
+char	*ft_strchr(const char *x, char y);
 
 #endif 
