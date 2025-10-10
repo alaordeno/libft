@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 16:45:43 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/10 15:29:57 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/10 15:21:44 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/10 16:15:24 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *x, int y)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (x[i] != '\0')
+	while (s[i] != '\0')
+		i++;
+	while (i > 0)
 	{
-		if (x[i] == y)
-			return ((char *)&x[i]);
-		else
-			i++;
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i--;
 	}
 	return (0);
 }
 
-/* int	main(void)
+int	main(void)
 {
-	char 	y;
-	char	x[] = "hola mundo";
+	char	s[] = "hola mundo";
+	char	x = "o";
 	
-	y = 'm';
-	printf("%s", ft_strchr(x, y));
-	return (0);
+	ft
+	printf("")
 }
- */
