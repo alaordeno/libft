@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_skip_neg.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/13 14:08:41 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/13 18:57:37 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/13 18:28:45 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/13 18:57:45 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdbool.h>
 
-int	ft_atoi(const char *nptr)
+t_sign	ft_skip_neg(char *nptr)
 {
-	int		res;
-	t_sign	is_negative;  //numero binario
-	int		digit; 
-	
-	res = 0;
-	ft_skip_space(nptr);
-	is_negative = ft_skip_neg(nptr);
-	while (ft_isdigit(*nptr))
+	t_sign	is_negative;
+
+	is_negative = POS;		//fallback
+	if ((*nptr == ASCII_NEG) || (*nptr == ASCII_POS))
 	{
-		digit = (*nptr++ - '0');
-		res = res * 10 + digit;
+		if (*nptr == ASCII_NEG) // TODO:verify if we can increment earlier
+			is_negative = NEG;
+		nptr++;
 	}
-	if (is_negative)
-		return (-res);
-	return (res);
+	return (is_negative);
 }
-
-int	main(void)
- {
-	char	*x = "42";
-	int	i = ft_atoi(x);
-
-	printf("%d\n", i);
- }
