@@ -6,13 +6,13 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 19:40:10 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/08 13:35:01 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:03:54 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_ispring(int x)
+int	ft_isprint(int x)
 {
 	if (x >= 32 && x <= 126)
 		return (1);

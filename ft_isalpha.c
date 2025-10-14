@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:41:15 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/13 19:18:18 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/14 17:12:29 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,15 @@ int	ft_isalpha(char x)
 	else
 		return (0);
 }
+
+/* int	main(void)
+{
+	char	x;
+	int		y;
+
+	x = 'a';
+	y = ft_isalpha(x);
+	printf("%d", y);
+	return (0);
+}
+ */

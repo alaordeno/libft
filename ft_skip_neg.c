@@ -6,14 +6,13 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 18:28:45 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/13 18:57:45 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/14 17:46:01 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdbool.h>
 
-t_sign	ft_skip_neg(char *nptr)
+t_sign	ft_skip_neg(const char *nptr)
 {
 	t_sign	is_negative;
 

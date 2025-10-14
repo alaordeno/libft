@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/13 18:58:23 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:14:17 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <limits.h>
+# include <stdbool.h>
+
 
 //state machine
 typedef enum e_map_char
@@ -29,7 +31,9 @@ typedef enum e_map_char
 	ASCII_BACKSPACE = '\b',
 	ASCII_CAR = '\r',
 	ASCII_NEG = '-',
-	ASCII_POS = '+'
+	ASCII_POS = '+',
+	ASCII_9 = '9',
+	ASCII_1 = '1'
 }	t_map_char;
 
 typedef enum e_sign
@@ -38,14 +42,15 @@ typedef enum e_sign
 	NEG
 }	t_sign;
 
-typedef struct s_map_cchar
+typedef struct	s_map_cchar
 {
 	int n;
-}t_map_cchar;
+}	t_map_cchar;
+
 int		ft_isalnum(char x);
 int		ft_isalpha(char x);
 int		ft_isascii(int x);
-int		ft_isdigit(int x);
+//int		ft_isdigit(int x);
 int		ft_ispring(int x);
 size_t	ft_strlcpy(char *dest, char *src, size_t size);
 int		ft_strlen(char *x);
@@ -54,11 +59,11 @@ char	ft_tolower(char y);
 char	*ft_strchr(const char *x, int y);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
-int		ft_atoi(const char *nptr);
+int		ft_atoi(char *nptr);
 void	*memset(void *s, int c, size_t n);
-t_sign	ft_skip_neg(char *nptr);
-int		ft_isspace(int c);
-
+//t_sign	ft_skip_neg(const char *nptr);
+//int		ft_isspace(int c);
+//void	ft_skip_space(char *ptr);
 
 
 #endif 

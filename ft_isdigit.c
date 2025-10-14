@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 17:48:10 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/08 13:34:57 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:02:20 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 int	ft_isdigit(int x)
 {
-	if (x >= '0' && x <= '9')
-		return (1);
-	else
-		return (0);
+	return (x >= ASCII_1 && x <= ASCII_9);
 }
 
-/*int	main(void)
-{
-	int		x;
-	char	y;
+// int	main(void)
+// {
+// 	int		x;
+// 	char	y;
 
-	y = 'A';
-	x = ft_isdigit(y);
-	printf("%d", x);
-	return (0);
-}*/
+// 	char *ptr = "12334abc56878";
+// 	while (*ptr)
+// 	{
+// 		printf("%d\n", ft_isdigit(*ptr));
+// 		ptr++;
+// 	}
+// 	return (0);
+// }
