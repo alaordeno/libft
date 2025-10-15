@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:09:08 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/15 12:09:15 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/15 15:05:23 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@ int	ft_atoi(const char *nptr)
 	int	s;
 	int	i;
 	int	d;
-	
+
 	i = 0;
 	s = 1;
 	r = 0;
 	while ((nptr[i] == 32) || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
-	if(nptr[i] == '+' || nptr[i] == '-')
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if(nptr[i] == '-')
+		if (nptr[i] == '-')
 			s = s * -1;
-		i++;	
+		i++;
 	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
@@ -39,7 +39,7 @@ int	ft_atoi(const char *nptr)
 	return (r * s);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	n[] = "  56";
 	int		x = ft_atoi(n);
@@ -47,3 +47,4 @@ int	main(void)
 	printf("%d\n", x);
 	return (0);
 }
+ */

@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 12:11:43 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/15 18:01:28 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/15 17:07:48 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/15 18:31:30 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	ft_memset(s, 0, n);
-}
+	size_t				i;
 
-/* int	main(void)
-{
-	char a[10];
-
-	ft_memset(a, 65, 5);
-	write (1, a, 5);
-	
-	ft_bzero(a, 5);
-
-	int count;
-
-	count = 0;
-	while (count < 5)
+	if (!dest || !src)
+		return (NULL);
+	if((unsigned char  *)dest > (unsigned char *)src)
 	{
-		if (a[count] != '\0')
+		i = n;
+		while(i > 0)
 		{
-			write(1, "bzero no funciona", 12);
-			return(1);
+			i--;
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		}
-		count++;
 	}
-	write (1, "bzero funciona correctamente", 22);
-	return (0); */
+}
