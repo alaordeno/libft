@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 17:48:10 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/14 18:02:20 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/15 10:41:10 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int x)
 {
-	return (x >= ASCII_1 && x <= ASCII_9);
+	return (x >= '0' && x <= '9');
 }
 
 // int	main(void)
@@ -30,3 +30,10 @@ int	ft_isdigit(int x)
 // 	}
 // 	return (0);
 // }
+
+/* static int	ft_isdigit(int x)
+{
+	return (x >= ASCII_1 && x <= ASCII_9);
+}
+
+ */

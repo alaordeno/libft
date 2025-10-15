@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/14 18:14:17 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/15 10:46:44 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # include <stdio.h>
 # include <limits.h>
 # include <stdbool.h>
-
 
 //state machine
 typedef enum e_map_char
@@ -42,9 +41,9 @@ typedef enum e_sign
 	NEG
 }	t_sign;
 
-typedef struct	s_map_cchar
+typedef struct s_map_cchar
 {
-	int n;
+	int	n;
 }	t_map_cchar;
 
 int		ft_isalnum(char x);
@@ -59,11 +58,10 @@ char	ft_tolower(char y);
 char	*ft_strchr(const char *x, int y);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
-int		ft_atoi(char *nptr);
+int		ft_atoi(const char *nptr);
 void	*memset(void *s, int c, size_t n);
 //t_sign	ft_skip_neg(const char *nptr);
 //int		ft_isspace(int c);
 //void	ft_skip_space(char *ptr);
-
 
 #endif 
