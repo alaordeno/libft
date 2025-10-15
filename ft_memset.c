@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 11:41:13 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/14 18:39:01 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:51:06 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  */
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char *ptr;
+	unsigned char	*ptr;
 
 	ptr = (unsigned char*)s;
 	while (n--)
