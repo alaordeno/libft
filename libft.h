@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/15 10:46:44 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/15 12:19:06 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,7 @@ void	*memset(void *s, int c, size_t n);
 //t_sign	ft_skip_neg(const char *nptr);
 //int		ft_isspace(int c);
 //void	ft_skip_space(char *ptr);
+void	ft_bzero(void *s, size_t n);
+void *ft_memcpy(void *dest, const void *src, size_t n);
 
 #endif 

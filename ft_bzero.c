@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_skip_space.c                                    :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:36:07 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/15 10:43:18 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/15 12:11:43 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/15 12:17:14 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_skip_space(const char **ptr)
+void	ft_bzero(void *s, size_t n)
 {
-	while (ft_isspace(**ptr))
-		(*ptr)++;
+	ft_memset(s, 0, n);
 }

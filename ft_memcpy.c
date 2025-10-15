@@ -1,49 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 12:09:08 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/15 12:09:15 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/15 12:18:10 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/15 12:57:40 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	r;
-	int	s;
-	int	i;
-	int	d;
+	size_t	i; //como un int pero mayor y simpre positivo//
+	unsigned char	*d;
+	const unsigned char	*s;
 	
 	i = 0;
-	s = 1;
-	r = 0;
-	while ((nptr[i] == 32) || (nptr[i] >= 9 && nptr[i] <= 13))
-		i++;
-	if(nptr[i] == '+' || nptr[i] == '-')
+	if (!src && !dest) //si no existe src, es igual a src == '\0'
+		return (NULL);
+
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	while (i < n)
 	{
-		if(nptr[i] == '-')
-			s = s * -1;
-		i++;	
-	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		d = nptr[i] - '0';
-		r = r * 10 + d;
+		d[i] = s[i];
 		i++;
 	}
-	return (r * s);
+	return (dest);
 }
 
 int	main(void)
 {
-	char	n[] = "  56";
-	int		x = ft_atoi(n);
-
-	printf("%d\n", x);
+	char	d[] = "hola";
+	char	s[] = "adios";
+	
+	printf("%p\n%s\n", ft_memcpy(d, s, 6), d);
 	return (0);
 }
