@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: miaviles <miaviles@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 19:56:54 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/20 12:35:48 by miaviles         ###   ########.fr       */
+/*   Created: 2025/10/20 12:37:22 by miaviles          #+#    #+#             */
+/*   Updated: 2025/10/20 13:09:10 by miaviles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *x)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	size_t len;
+	char	*s3;
 
-	i = 0;
-	while (x[i] != '\0')
-		i++;
-	return (i);
+	if(!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	s3 = (char *)malloc(sizeof(char) * len + 1);
+	if (!s3)
+		return (NULL);
+	ft_strlcpy(s3, s1, len + 1);
+	ft_strlcat(s3, s2, len + 1);
+	return (s3);
 }
-
 /*int	main(void)
 {
-	char	*y;
-
-	y = "hola";
-	printf("%d\n", ft_strlen(y));
+	char *a = ft_strjoin("hola", " guapo");
+	printf("%s\n", a);
+	free (a);
 	return (0);
 }*/
