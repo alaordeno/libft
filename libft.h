@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/17 17:40:24 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/22 12:57:07 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,6 @@
 # include <stdio.h>
 # include <limits.h>
 # include <stdbool.h>
-
-/* //state machine
-typedef enum e_map_char
-{
-	ASCII_SPACE = ' ',
-	ASCII_BACKSPACE = '\b',
-	ASCII_CAR = '\r',
-	ASCII_NEG = '-',
-	ASCII_POS = '+',
-	ASCII_9 = '9',
-	ASCII_1 = '1'
-}	t_map_char;
- */
-/* typedef enum e_sign
-{
-	POS,
-	NEG
-}	t_sign;
- */
-/* typedef struct s_map_cchar
-{
-	int	n;
-}	t_map_cchar; */
 
 int		ft_isalnum(char x);
 int		ft_isalpha(char x);
@@ -66,5 +43,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif 
