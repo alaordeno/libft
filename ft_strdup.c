@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:55:46 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/17 17:42:23 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:09:38 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ char	*ft_strdup(const char *s)
 {
 	char	*str;
 	int		l;
-	
+
 	l = ft_strlen(s) + 1;
-	str = (char	*)malloc(l); 
-	if(!str)
+	str = (char *)malloc(l);
+	if (!str)
 		return (NULL);
 	ft_strlcpy(str, s, l);
 	return (str);
