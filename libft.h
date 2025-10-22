@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/15 17:08:54 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/17 17:40:24 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ int		ft_isalpha(char x);
 int		ft_isascii(int x);
 int		ft_isdigit(int x);
 int		ft_ispring(int x);
-size_t	ft_strlcpy(char *dest, char *src, size_t size);
-int		ft_strlen(char *x);
-char	ft_touper(char x);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+int		ft_strlen(const char *x);
+char	ft_toupper(char x);
 char	ft_tolower(char y);
 char	*ft_strchr(const char *x, int y);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -63,5 +63,8 @@ void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 
 #endif 

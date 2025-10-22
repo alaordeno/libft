@@ -1,33 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 19:56:54 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/17 17:40:11 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/17 15:18:10 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/17 16:06:28 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" //busca caracter concreto dentro de s
 
-int	ft_strlen(const char *x)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*x;
 
+	x = (unsigned char *)s;
+	c = (unsigned char)c;
 	i = 0;
-	while (x[i] != '\0')
+	while (i < n)
+	{
+		if (x[i] == c)
+			return ((void *)(x + i));
 		i++;
-	return (i);
+	}
+	return (0);
 }
 
 /* int	main(void)
 {
-	char	*y;
-
-	y = "holaAAAAAA";
-	printf("%d\n", ft_strlen(y));
-	return (0);
+	const char *str = "Hola Mundo";
+	char	c = 'i';
+	size_t n = 11;
+	
+	char	*x = (char *)ft_memchr(str, c, n);
+	
+	if (x)
+		write (1, x, 1);
+	else
+		write(1, "Nop", 3);
+	return (0);	
+	
 }
-*/ 
+ */	

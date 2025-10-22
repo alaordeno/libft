@@ -1,52 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 17:07:48 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/17 15:17:27 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/17 16:17:20 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/17 16:55:18 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
+	void	*b;
 
-	if (!dest && !src)
+	b = (void *)malloc(size * nmemb);
+	if (!b)
 		return (NULL);
-	if ((unsigned char *)dest > (unsigned char *)src)
-	{
-		i = n;
-		while (i > n)
-		{
-			i--;
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		}
-	}
-	else
-	{
-		i = 0;
-		while (i < n)
-		{
-			(((unsigned char *)dest)[i] = ((unsigned char *)src)[i]);
-			i++;
-		}
-	}
-	return (dest);
+	ft_bzero(b, size * nmemb);
+	return (b);
 }
 
 /* int	main(void)
 {
-	char src[] = "adios";
-	char dest[] = "Hola";
+	int	*n;
+	int	x = 5;
 
-	ft_memmove(dest, src, 5);
+	n = (int *)ft_calloc(x, sizeof(int));
+	if (!n)
+	{
+		printf("ERROR\n");
+		return (1);
+	}
 
-	write(1, dest, 5);
+	size_t	c = 0;
+	while (c < (size_t)x)
+	{
+		printf("n%zu = %d\n", c, n[c]);
+		c++;
+	}
+
+	free(n);
 	return (0);
 }
  */

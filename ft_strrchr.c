@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 15:21:44 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/10 16:53:43 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/17 16:15:14 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	c;
 	char	s[] = "abracadabra";
 
-	c = 'z';
+	c = 'b';
 	printf("%s\n", ft_strrchr(s, c));
 	return(0);
 }

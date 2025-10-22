@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 19:56:54 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/17 17:40:11 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/08 15:45:17 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/17 16:09:15 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *x)
+char	ft_toupper(char x)
 {
-	int	i;
-
-	i = 0;
-	while (x[i] != '\0')
-		i++;
-	return (i);
+	if (x >= 'a' && x <= 'z')
+		x = x - 32;
+	return (x);
 }
 
-/* int	main(void)
+/*int	main(void)
 {
-	char	*y;
+	char	x;
 
-	y = "holaAAAAAA";
-	printf("%d\n", ft_strlen(y));
+	x = 'k';
+	printf("%c\n", ft_toupper(x));
 	return (0);
-}
-*/ 
+}*/

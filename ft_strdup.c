@@ -1,29 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_touper.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 15:45:17 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/08 16:17:32 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/17 16:55:46 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/17 17:42:23 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_touper(char x)
+char	*ft_strdup(const char *s)
 {
-	if (x >= 'a' && x <= 'z')
-		x = x - 32;
-	return (x);
+	char	*str;
+	int		l;
+	
+	l = ft_strlen(s) + 1;
+	str = (char	*)malloc(l); 
+	if(!str)
+		return (NULL);
+	ft_strlcpy(str, s, l);
+	return (str);
 }
 
-/*int	main(void)
+/* int	main(void)
 {
-	char	x;
+	const char *x = "hola";
+	char *y;
 
-	x = 'k';
-	printf("%c\n", ft_touper(x));
-	return (0);
-}*/
+	y = ft_strdup(x);
+	if (!y)
+	{
+		printf("No se ha podido duplicar.\n");
+		return (1);
+	}
+
+	printf("Cadena original: %s\n", x);
+	printf("Cadena duplicada: %s\n", y);
+
+	free(y);	
+	return  (0);
+} 
+ */
