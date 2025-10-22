@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:07:48 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/15 18:31:30 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/10/17 15:17:27 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,39 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t				i;
+	size_t	i;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
-	if((unsigned char  *)dest > (unsigned char *)src)
+	if ((unsigned char *)dest > (unsigned char *)src)
 	{
 		i = n;
-		while(i > 0)
+		while (i > n)
 		{
 			i--;
 			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		}
 	}
+	else
+	{
+		i = 0;
+		while (i < n)
+		{
+			(((unsigned char *)dest)[i] = ((unsigned char *)src)[i]);
+			i++;
+		}
+	}
+	return (dest);
 }
+
+/* int	main(void)
+{
+	char src[] = "adios";
+	char dest[] = "Hola";
+
+	ft_memmove(dest, src, 5);
+
+	write(1, dest, 5);
+	return (0);
+}
+ */

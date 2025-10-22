@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_touper.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 15:45:17 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/08 16:17:32 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/22 10:25:23 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/22 11:51:01 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* #include "libft.h"
 
-char	ft_touper(char x)
+char	**ft_split(char const *s, char c)
 {
-	if (x >= 'a' && x <= 'z')
-		x = x - 32;
-	return (x);
+	
 }
-
-/*int	main(void)
-{
-	char	x;
-
-	x = 'k';
-	printf("%c\n", ft_touper(x));
-	return (0);
-}*/
+//hacer */

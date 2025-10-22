@@ -1,31 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 11:41:13 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/22 10:03:26 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/22 12:56:15 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/22 13:04:38 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	while (n--)
-		*ptr++ = (unsigned char)c;
-	return (s);
+	unsigned int	i;
+	
+	if (!s || !f)
+		return ;
+	i = 0;
+	
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
-/* int	main(void)
+
+/* static void   ft_add_count(unsigned int n, char *c)
 {
-	char	x[10];
-	ft_memset(x, 82, 5);
-	write(1, x, 10);
+	n = 2;
+    *c = *c + n;
+}
+
+
+int	main(void)
+{
+	char str[] = "Hola que tal?";
+
+	ft_striteri(str, ft_add_count);
+        
+	printf("%s\n", str);
+
 	return (0);
 } */

@@ -1,31 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 11:41:13 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/22 10:03:26 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/17 16:55:46 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/22 10:09:38 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_strdup(const char *s)
 {
-	unsigned char	*ptr;
+	char	*str;
+	int		l;
 
-	ptr = (unsigned char *)s;
-	while (n--)
-		*ptr++ = (unsigned char)c;
-	return (s);
+	l = ft_strlen(s) + 1;
+	str = (char *)malloc(l);
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, s, l);
+	return (str);
 }
 
 /* int	main(void)
 {
-	char	x[10];
-	ft_memset(x, 82, 5);
-	write(1, x, 10);
-	return (0);
-} */
+	const char *x = "hola";
+	char *y;
+
+	y = ft_strdup(x);
+	if (!y)
+	{
+		printf("No se ha podido duplicar.\n");
+		return (1);
+	}
+
+	printf("Cadena original: %s\n", x);
+	printf("Cadena duplicada: %s\n", y);
+
+	free(y);	
+	return  (0);
+} 
+ */

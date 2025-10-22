@@ -1,31 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 11:41:13 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/22 10:03:26 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/17 16:17:20 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/17 16:55:18 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char	*ptr;
+	void	*b;
 
-	ptr = (unsigned char *)s;
-	while (n--)
-		*ptr++ = (unsigned char)c;
-	return (s);
+	b = (void *)malloc(size * nmemb);
+	if (!b)
+		return (NULL);
+	ft_bzero(b, size * nmemb);
+	return (b);
 }
 
 /* int	main(void)
 {
-	char	x[10];
-	ft_memset(x, 82, 5);
-	write(1, x, 10);
+	int	*n;
+	int	x = 5;
+
+	n = (int *)ft_calloc(x, sizeof(int));
+	if (!n)
+	{
+		printf("ERROR\n");
+		return (1);
+	}
+
+	size_t	c = 0;
+	while (c < (size_t)x)
+	{
+		printf("n%zu = %d\n", c, n[c]);
+		c++;
+	}
+
+	free(n);
 	return (0);
-} */
+}
+ */
