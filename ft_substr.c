@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:17:35 by miaviles          #+#    #+#             */
-/*   Updated: 2025/10/22 10:07:23 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:30:40 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (start >= ft_strlen(s))
+	if ((size_t)start >= ft_strlen(s))
 		len = 0;
 	if (ft_strlen(s) - start < len)
 		len = ft_strlen(s) - start;

@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/27 17:58:06 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:47:18 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int		ft_isalnum(char x);
 int		ft_isalpha(char x);
 int		ft_isascii(int x);
 int		ft_isdigit(int x);
-int		ft_ispring(int x);
+int		ft_isprint(int x);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-int		ft_strlen(const char *x);
-char	ft_toupper(char x);
-char	ft_tolower(char y);
+size_t	ft_strlen(const char *x);
+int		ft_toupper(int x);
+int		ft_tolower(int y);
 char	*ft_strchr(const char *x, int y);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
@@ -51,5 +51,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 #endif 

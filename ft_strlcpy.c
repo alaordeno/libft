@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 11:47:41 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/17 17:37:24 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/04 16:15:20 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,30 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	temp;
+	size_t	i;
+	size_t	j;
 
-	temp = 0;
-	while (*src != '\0' && size--)
+	j = 0;
+	while (src[j])
+		j++;
+	if (size == 0)
+		return (j);
+	i = 0;
+	while (src[i] && i < size - 1)
 	{
-		*dest = *src;
-		src++;
-		dest++;
-		temp++;
+		dest[i] = src[i];
+		i++;
 	}
-	return (temp);
+	dest[i] = '\0';
+	return (j);
 }
 
-/* int	main(void)
+/*  int	main(void)
 {
 	char			dest[45];
 	unsigned int	temp;
 
-	temp = ft_strlcpy(dest, "Puta función", ft_strlen("Puta función"));
+	temp = ft_strlcpy(dest, "hola mundo", ft_strlen("hola mundo"));
 	printf("temp: %u   dest: %s\n", temp, dest);
 }
  */

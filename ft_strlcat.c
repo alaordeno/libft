@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:36:24 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/10 15:15:53 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:40:41 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,33 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	c;
-	unsigned int	j;
+	size_t	d;
+	size_t	s;
+	size_t	i;
 
-	c = 0;
-	j = 0;
-	while (dst[c] != '\0')
-		c++;
-	while (src[j] != '\0' && c < (size - 1))
+	d = 0;
+	s = 0;
+	while (dst[d] && d < size)
+		d++;
+	while (src[s])
+		s++;
+	if (d == size)
+		return (size + s);
+	i = 0;
+	while (src[i] && d + i + 1 < size)
 	{
-		dst[c] = src[j];
-		c++;
-		j++;
+		dst[d + i] = src[i];
+		i++;
 	}
-	dst[c] = '\0';
-	return (c);
+	if (d < size)
+		dst[d + i] = '\0';
+	return (d + s);
 }
 
 /*  int main(void)
  {
-	char	dst[] = "puta";
-	const char src[] = " funcion";
+	char	dst[] = "hola";
+	const char src[] = " mundo";
 	
 	ft_strlcat(dst, src, 15);
 	printf("%s\n", dst);

@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:45:43 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/17 16:13:08 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/04 16:38:29 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,14 @@ char	*ft_strchr(const char *x, int y)
 	i = 0;
 	while (x[i] != '\0')
 	{
-		if (x[i] == y)
+		if (x[i] == (char)y)
 			return ((char *)&x[i]);
 		else
 			i++;
 	}
-	return (0);
+	if ((char)y == '\0')
+		return ((char *)&x[i]);
+	return (NULL);
 }
 
 /* int	main(void)
