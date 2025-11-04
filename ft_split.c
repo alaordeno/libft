@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 10:25:23 by alaorden          #+#    #+#             */
-/*   Updated: 2025/11/04 14:59:00 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:02:24 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,21 +110,20 @@ char	**ft_split(char const *s, char c)
 	return (array);
 }
 
-/* int	main(void)
+/* int main(void)
 {
-	char	**result;
-	size_t	i = 0;
-
-	result = ft_split("hola mundo !", ' ');
-	while (result[i])
+	char x[] = "hola mundo";
+	char c = ' ';
+	int	l = 0;
+	char **y = ft_split(x, c);
+	while (y[l] != NULL)
 	{
-		printf("String %lu: \"%s\"\n", i, result[i]);
-		free(result[i]);
-		i ++;
-	}
-	printf("String %lu: \"%s\"\n", i, result[i]);
-
-	if (result)
-		free(result);
+		printf("[%d] %s\n", l, y[l]);
+		l++;
+	}	
+	l = 0;
+	while (y[l] != NULL)
+		free (y[l++]);
+	free(y);
 	return (0);
-} */
+}  */

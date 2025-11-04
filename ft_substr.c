@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:17:35 by miaviles          #+#    #+#             */
-/*   Updated: 2025/11/04 15:30:40 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/04 18:42:00 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	r[l] = '\0';
 	return (r);
 }
-/*int	main(void)
-{
-	char const	s[] = "hola mundo";
-	unsigned int	start = 5;
-	size_t	len = 6;
 
-	free (printf("%s\n", ft_substr(s, start, len)));
+/* int main(void)
+{
+	char s[] = "hola mundo";
+	unsigned int start = 5;
+	size_t len = 6;
+	char *x = ft_substr(s, start, len);
+	printf("%s \n", x);
+	free (x);
 	return (0);
-}*/
+}
+ */
