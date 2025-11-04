@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 12:56:15 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/27 15:39:16 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/27 16:17:37 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/27 16:40:30 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_putendl_fd(char *s, int fd)
 {
-	unsigned int	i;
+	int	i;
 
-	if (!s || !f)
-		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{
-		f(i, &s[i]);
+		write(fd, &s[i], 1);
 		i++;
 	}
+	write(fd, "\n", 1);
 }
 
-/* static void   ft_add_count(unsigned int n, char *c)
+/* int	main(void)
 {
-	n = 2;
-    *c = *c + n;
-}
-
-
-int	main(void)
-{
-	char str[] = "Hola que tal?";
-
-	ft_striteri(str, ft_add_count);
-        
-	printf("%s\n", str);
-
+	ft_putendl_fd("hola", 1);
 	return (0);
-} */
+}
+ */

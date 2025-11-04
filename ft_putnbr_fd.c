@@ -1,45 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 12:56:15 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/27 15:39:16 by alaorden         ###   ########.fr       */
+/*   Created: 2025/10/27 17:20:53 by alaorden          #+#    #+#             */
+/*   Updated: 2025/10/27 17:57:36 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	i;
-
-	if (!s || !f)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
+	if (n == -2147483648)
 	{
-		f(i, &s[i]);
-		i++;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		n = 147483648;
 	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+	}
+	ft_putchar_fd((n % 10) + '0', fd);
 }
 
-/* static void   ft_add_count(unsigned int n, char *c)
+/* int	main(void)
 {
-	n = 2;
-    *c = *c + n;
-}
-
-
-int	main(void)
-{
-	char str[] = "Hola que tal?";
-
-	ft_striteri(str, ft_add_count);
-        
-	printf("%s\n", str);
-
+	ft_putnbr_fd(-1254, 1);
 	return (0);
 } */
