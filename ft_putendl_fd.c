@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:17:37 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/27 16:40:30 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/05 14:12:06 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, "\n", 1);
 }
 
-/* int	main(void)
+/*  int	main(void)
 {
 	ft_putendl_fd("hola", 1);
 	return (0);
 }
- */
+  */

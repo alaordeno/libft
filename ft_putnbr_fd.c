@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:20:53 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/27 17:57:36 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/05 14:14:58 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,4 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	ft_putnbr_fd(-1254, 1);
 	return (0);
-} */
+}  */

@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:18:10 by alaorden          #+#    #+#             */
-/*   Updated: 2025/10/17 16:06:28 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/05 14:08:45 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /* int	main(void)
 {
 	const char *str = "Hola Mundo";
-	char	c = 'i';
+	char	c = 'M';
 	size_t n = 11;
 	
 	char	*x = (char *)ft_memchr(str, c, n);
@@ -43,5 +43,4 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		write(1, "Nop", 3);
 	return (0);	
 	
-}
- */	
+} */

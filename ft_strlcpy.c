@@ -6,7 +6,7 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 11:47:41 by alaorden          #+#    #+#             */
-/*   Updated: 2025/11/04 16:15:20 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/05 14:18:13 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (j);
 }
 
-/*  int	main(void)
+/* int	main(void)
 {
 	char			dest[45];
 	unsigned int	temp;

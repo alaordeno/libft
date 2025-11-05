@@ -6,25 +6,25 @@
 /*   By: alaorden <alaorden@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 13:27:03 by alaorden          #+#    #+#             */
-/*   Updated: 2025/11/04 15:47:18 by alaorden         ###   ########.fr       */
+/*   Updated: 2025/11/05 14:16:54 by alaorden         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
 # include <stdint.h>
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <ctype.h>
 # include <stddef.h>
-# include <stdio.h>
 # include <limits.h>
 # include <stdbool.h>
 
 int		ft_isalnum(char x);
-int		ft_isalpha(char x);
+int		ft_isalpha(int x);
 int		ft_isascii(int x);
 int		ft_isdigit(int x);
 int		ft_isprint(int x);
@@ -40,6 +40,7 @@ void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
